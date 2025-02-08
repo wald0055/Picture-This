@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Picture This!</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -15,7 +15,49 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+<!--Landscape picture-->
+  <picture>
+      
+      <source srcset="images/museum-320.jpg,
+                images/museum-640.jpg 2x,
+                images/museum-960.jpg 3x"
+          media="(max-width: 320px)"/>
+
+<source srcset="images/museum-480.jpg,
+                images/museum-960.jpg 2x,
+                images/museum-1440.jpg 3x"
+          media="(max-width: 480px)"/>
+
+<source srcset="images/museum-720.jpg,
+                images/museum-1440.jpg 2x,
+                images/museum-2160.jpg 3x"
+          media="(max-width: 720px)"/>
+
+<source srcset="images/museum-960.jpg,
+                 images/museum-1920.jpg 2x,
+                images/museum-2880.jpg 3x"
+          media="(max-width: 960px)"/>
+
+<!--Square Picture-->
+<source srcset="images/museum-480x480.jpg,
+                images/museum-960x960.jpg 2x,
+                images/museum-1440x1440.jpg 3x"
+          media="(min-width: 961px)"/>
+
+<source srcset="images/museum-640x640.jpg,
+                images/museum-1280x1280.jpg 2x,
+                images/museum-1920x1920.jpg 3x"
+          media="(min-width: 1280px)"/>
+
+<source srcset="images/museum-800x800.jpg,
+                images/museum-1600x1600.jpg 2x,
+                images/museum-2400x2400.jpg 3x"
+          media="(min-width: 1600px)"/>
+
+<!--Fallback image-->
+<img src="images/museum-960.jpg" alt="Museum">
+  </picture>
+
 
   </header>
 </body>
